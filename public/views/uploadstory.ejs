@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('partials/head') %>
+</head>
+<body>
+    <a href="/" class="previous round">&#8249;</a>
+  <div class="uploadstory">
+    <h1>Add Story Info</h1>
+    <div class="cover">Add a cover</div>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Untitled Story">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Enter the story description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="main-characters">Main Characters</label>
+        <input type="text" id="main-characters" placeholder="Name">
+      </div>
+      <div class="buttons">
+        <button type="button" class="cancel">Cancel</button>
+        <button type="button" class="add">add</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
