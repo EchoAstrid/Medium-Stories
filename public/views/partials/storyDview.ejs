@@ -1,0 +1,33 @@
+<!-- story-details.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title><%= story.title %></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><%= story.title %></h1>
+        <p><strong>Author:</strong> <%= story.author %></p>
+    </header>
+
+    <section class="story-detail-content">
+        <p><%= story.content %></p> <!-- Story content from database -->
+    </section>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            
+            <img src="<%= story.image1 %>" alt="Story Image 1">
+        </div>
+        <!-- Add more slides if necessary -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+
+    <footer>
+        <a href="/">Back to Home</a>
+    </footer>
+</body>
+</html>
