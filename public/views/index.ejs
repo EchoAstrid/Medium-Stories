@@ -18,28 +18,27 @@
     </nav>
           
     <div class="container">
-      <% stories.forEach(stories => { %>
-        <div class="articles">
-          <div class="author">
-            <img src="../image/<%= stories.image url %>" alt="Sticking the Landing">
-            <h2><%= stories.title%></h2>
-          
-            <p class="summary">
-             <%=stories.summary%>
-            </p>
-          <p class="content">
-            <%=stories.content%>
-
-            <a href="/story-details" class="read-more">Read More</a>
-            <div class="byline">
-              <span><%=stories.author%></span>
+      <div>
+        <% stories.forEach( (story) => { %>
+          <div class="articles">
+            <div class="author">
+              <img src="../image/<%= stories.image_url %>" alt="Sticking the Landing" />
+              <h2><%= story.title %></h2>
+              <p class="summary">
+                <%= story.summary %>
+              </p>
+              <p class="content">
+                <%= story.content %>
+              </p>
+              <a href="/story-details" class="read-more">Read More</a>
+              <div class="byline">
+                <span><%= story.author %></span>
+              </div>
             </div>
           </div>
-
-          
-            <% }) %>
-          </div>
-</div>
+        <% }); %>
+      </div>
+    </div>
 
     <footer>
             <p>&copy; 2025 Medium Stories. All Rights Reserved.</p>
