@@ -2,24 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/head') %>
-    <title><%= story.title %></title>
-    <link rel="stylesheet" href="css/style.css">
+    <%- include ('partials/head') %>
 </head>
 <body>
     <header>
-        <h1><%= story.title %></h1>
-        <p><strong>Author:</strong> <%= story.author %></p>
+        <%stories.forEach(stories => { %>
+        <h1><%= stories.title %></h1>
+        <p><strong>Author:</strong> <%= stories.author %></p>
     </header>
-
+    
     <section class="story-detail-content">
-        <p><%= story.content %></p> <!-- Story content from database -->
+        <p><%= stories.content %></p> <!-- Story content from database -->
     </section>
     <div class="slideshow-container">
         <div class="mySlides fade">
             
-            <img src="<%= story.image1 %>" alt="Story Image 1">
+            <img src="../image/ stories.image url %>" alt="Story Image 1">
         </div>
+        <%}) %>
         <!-- Add more slides if necessary -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>

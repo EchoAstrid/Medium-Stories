@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <%- include ('partials/head') %>
+    <%- include('partials/head') %>
 </head>
 <body>
     <header>
@@ -18,105 +18,26 @@
     </nav>
           
     <div class="container">
+      <% stories.forEach(stories => { %>
         <div class="articles">
           <div class="author">
-            <img src="../image/THe ghost and the boy.jpg" alt="Sticking the Landing">
-            <h2>The ghost and the boy</h2>
+            <img src="../image/<%= stories.image url %>" alt="Sticking the Landing">
+            <h2><%= stories.title%></h2>
           
             <p class="summary">
-              Timmy was scared of everything. He didn't like trying new things. He was too nervous to speak up in class, join games, or even ride his bike without training wheels. “What if I fall? What if I mess up?” Timmy always asked. 
+             <%=stories.summary%>
             </p>
-          
+          <p class="content">
+            <%=stories.content%>
 
             <a href="/story-details" class="read-more">Read More</a>
             <div class="byline">
-              <span>unknown</span>
+              <span><%=stories.author%></span>
             </div>
           </div>
 
-          <div class="author">
-            <img src="../image/Rapunzel.jpg" alt="Sticking the Landing">
-            <h2>Rapunzel</h2>
-            <p class="summary">
-
-              A beautiful princess is trapped in a tower by a wicked witch. A brave prince, drawn by her enchanting voice, sets out to rescue her. But their journey is filled with twists and turns, and their love is put to the ultimate test.
-            </p>
-           
-                <a href="/story-details" class="read-more">Read More</a>
-            <div class="byline">
-              <span>unknown</span>
-            </div>
-          </div>
-
-
-          <div class="author">
-            <img src="../image/pinocchio-story.jpg" alt="Sticking the Landing">
-            <h2>Pinocchio</h2>
-            <p class="summary">
-              A lonely carpenter named Geppetto carves a wooden boy named Pinocchio. But this wooden boy has a secret… He can talk! Join Pinocchio on his wild adventures as he learns about friendship, honesty, and becoming a real boy. 
-            </p>
-            <p class="full-content" style="display: none;">
-              Many years ago, in a small town, there lived a kind old carpenter named Geppetto. Lonely and wishing for a son, he carved a wooden doll. To his surprise, the doll came to life and called him “Father.” Geppetto named him Pinocchio and told him he could become a real boy if he studied and behaved well.
-            <br></br>
-            But Pinocchio didn't want to study. He ran away and caused trouble, leading to Geppetto being mistakenly arrested. Feeling guilty, Pinocchio returned home, cold and hungry. While warming himself, his legs accidentally burned. When Geppetto came back, he forgave Pinocchio and made new legs for him.
-            <br></br>
-            Pinocchio promised to be good and go to school. The next day, Geppetto gave him an alphabet book, but on the way, Pinocchio was distracted by a puppet show. He sold his book for a ticket. Though the show ended in chaos, the kind circus owner gave Pinocchio five gold coins.
-
-              On his way home, a sly fox and cat tricked Pinocchio into burying his coins near a “miracle tree” to grow wealth. Instead, they stole his money and tied him to a tree. A kind fairy rescued him, but when Pinocchio lied about what happened, his nose grew longer. Realizing his mistake, he promised never to lie again.
-            <br></br>
-            Later, Pinocchio was lured into an amusement park where children turned into donkeys for neglecting their responsibilities. Transformed, Pinocchio was sold to a cruel circus owner. While performing, he broke his leg and was thrown into the sea.
-
-            In the water, fish ate away his donkey form, and Pinocchio became himself again. But soon, a giant whale swallowed him. Inside the whale, Pinocchio was overjoyed to find Geppetto, who had been searching for him. Together, they escaped when the whale opened its mouth.
-          <br></br>
-          Back home, Pinocchio cared for Geppetto until he recovered. Seeing his bravery and kindness, the fairy turned Pinocchio into a real boy. Geppetto and Pinocchio lived happily ever after, grateful for their love and newfound bond.
-          </p>
-          <a href="#" class="read-more" onclick="toggleReadMore(event)">Read More</a>
-          <div class="byline">
-            <span>unknown</span>
-          </div>
-        </div>
-
-          <div class="author">
-            <img src="../image/the-tortoise-and-the-haire.jpg" alt="Sticking the Landing">
-            <h2>THe Tortoise and the Haire</h2>
-            <p>
-              The Hare always mocks Tortoise because he is really slow. But which one will win in an actual competition?</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="byline">
-              <span>unknow</span>   
-            </div>
-          </div>
-            
-          <div class="author">
-            <img src="../image/Hellen-Keller.jpg" alt="Sticking the Landing">
-            <h2>Helen Keller</h2>
-            <p>Join Helen Keller on a journey of courage and hope, where she learns to overcome challenges and inspire others.</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="byline">
-              <span>unknow</span>   
-            </div>
-          </div>
-           
-          <div class="author">
-            <img src="../image/Stella-and-the-sun.jpg" alt="Sticking the Landing">
-            <h2>Stella and the Sun</h2>
-            <p>
-              Meet Stella, a little adventurer who dreams of touching the sun! Join her on a magical journey to the mountaintop, where she discovers the importance of the sun’s warmth and light.</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="byline">
-              <span>unknow</span>   
-            </div>
-          </div>
-        
-          <div class="author">
-            <img src="../image/Grown-ups-language.jpg" alt="Sticking the Landing">
-            <h2>Grown ups' Language!</h2>
-            <p>
-              Meet Jack, a curious six-year-old who’s learning the strange language of grown-ups. It’s his birthday, and he’s determined to make sense of their mysterious words and actions.</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="byline">
-              <span>unknow</span>   
-            </div>
+          
+            <% }) %>
           </div>
 </div>
 
