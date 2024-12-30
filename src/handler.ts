@@ -16,11 +16,11 @@ import { stories } from './DataBase/model/stories';
 
 
 
-export const homeHandler = async ( req: Request, res: Response) => {
+export const homeHandler = async (req: Request, res: Response) => {
     
         const stories = await GetStoriesDetail();
         console.log(stories);
-        res.render('index');
+        res.render('index',{ stories });
  
   
 };
